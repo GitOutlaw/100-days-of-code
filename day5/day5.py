@@ -1,4 +1,14 @@
-fruits = ["Apple", "Peach", "Pear"]
+# fruits = ["Apple", "Peach", "Pear"]
 
-for fruit in fruits:
-    print(f"{fruit} Pie")
+# for fruit in fruits:
+#     print(f"{fruit} Pie")
+
+# for number in range(1, 11, 3):
+#     print(number)
+
+
+total = 0
+
+for number in range(1,101):
+    total += number
+print(total)
