@@ -14,8 +14,4 @@ choice_letters = random.choices(letters, k=nr_letters)
 choice_symbols = random.choices(symbols, k=nr_symbols)
 choice_numbers = random.choices(numbers, k=nr_numbers)
 
-print(choice_numbers)
-print(choice_symbols)
-print(choice_numbers)
-
 print(*choice_letters + choice_symbols + choice_numbers, sep="")
