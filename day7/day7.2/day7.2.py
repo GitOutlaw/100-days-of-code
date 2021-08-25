@@ -11,7 +11,8 @@ print(f'Pssst, the solution is {chosen_word}.')
 #For each letter in the chosen_word, add a "_" to 'display'.
 #So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
 
-display = [] 
+display = [] * len("_") 
+
 
 guess = input("Guess a letter: ").lower()
 
@@ -19,13 +20,22 @@ guess = input("Guess a letter: ").lower()
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
 
+for letter in display:
+    if letter in chosen_word:
+        print(guess + display)
+    else:
+        print(display)
+
+
+
 
 # for letter in chosen_word:
 #     if letter == guess:
-#         display += letter
-#         print(guess)
+#         print("Right")
 #     else:
-#         print("_")
+#         print("Wrong")
+
+        
 
 #TODO-3: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
 #Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
