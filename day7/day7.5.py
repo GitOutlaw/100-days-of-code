@@ -1,5 +1,3 @@
-# Step 5
-
 from replit import clear
 import random
 from hangman_words import word_list
