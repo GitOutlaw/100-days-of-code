@@ -6,7 +6,7 @@ from hangman_art import *
 
 
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-# Delete this line: word_list = ["ardvark", "baboon", "camel"]
+
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
@@ -44,6 +44,9 @@ while not end_of_game:
     if guess not in chosen_word:
         # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
         lives -= 1
+        if guess not in chosen_word:
+            print(f"You guessed {guess}, that's not in the word. You lose a life")
+
         if lives == 0:
             end_of_game = True
             print("You lose.")
