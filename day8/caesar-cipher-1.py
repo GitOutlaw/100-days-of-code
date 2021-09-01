@@ -14,7 +14,6 @@ encoding = True
 def encrypt(direction, text, shift, cipher_text):
 
     if direction == "encode":
-
         for letter in text:
             position = alphabet.index(letter)
             shifting_letter = (position + shift) % 26
