@@ -8,8 +8,6 @@ shift = int(input("Type the shift number:\n"))
 
 cipher_text = ""
 
-encoding = True
-
 
 def encrypt(direction, text, shift, cipher_text):
 
