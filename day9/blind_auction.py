@@ -3,7 +3,9 @@ from auction_art import logo
 
 print(logo)
 
+# creates empty dictionary
 bids = {}
+# sets condition for while loop - set to False
 bidding_finished = False
 
 
