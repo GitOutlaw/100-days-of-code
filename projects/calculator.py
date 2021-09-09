@@ -19,7 +19,7 @@ def divide(n1, n2):  # Divide
     return n1 / n2
 
 
-def exponent(n1, n2):  # Divide
+def exponent(n1, n2):  # Exponent
     return n1 ** n2
 
 
