@@ -42,6 +42,8 @@ def calculator():
     print(logo)
 
     while True:
+        
+
         try:
             num1 = float(input("What's the first number?: "))
             break
