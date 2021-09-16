@@ -11,7 +11,7 @@ word_length = len(chosen_word)
 
 lives = len(stages) -1
 
-# Testing code
+# Used to debug code, displays answer.
 print(f'Pssst, the solution is {chosen_word}.')
 
 # Create blanks
@@ -22,9 +22,7 @@ for _ in range(word_length):
 
 while not game_is_finished:
     guess = input("Guess a letter: ").lower()
-
     clear()
-
     # Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
@@ -32,6 +30,7 @@ while not game_is_finished:
             display[position] = letter
     print(f"{' '.join(display)}")
 
+    # Checks to see if guess has been used already.
     if guess in display:
         print(f"You've already guessed {guess}")
 

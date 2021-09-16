@@ -8,6 +8,7 @@ bidding_finished = False
 
 
 def find_highest_bidder(bidding_record):
+    """"Finds highest bidder using for loop."""
     highest_bid = 0
     winner = ""
     for bidder in bidding_record:
@@ -19,6 +20,7 @@ def find_highest_bidder(bidding_record):
 
 
 while not bidding_finished:
+    """While loop to determine if game finshed and or to continue bids"""
     name = input("What is your name?: ")
     price = int(input("What is your bid?: $"))
     bids[name] = price

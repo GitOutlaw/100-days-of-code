@@ -29,6 +29,8 @@ Scissors
       (____)
 ---.__(___)
 '''
+
+# Creates list of rock, paper, scissors.
 game_images = [rock, paper, scissors]
 
 user_choice = int(

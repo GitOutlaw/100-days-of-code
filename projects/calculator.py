@@ -3,23 +3,28 @@ from replit import clear  # Import clear function
 from calculator_art import logo  # Import logo from calculator_art.py
 
 
-def add(n1, n2):  # Add
+def add(n1, n2):
+    """Adds n1 and n2. Returns the sum"""
     return n1 + n2
 
 
-def subtract(n1, n2):  # Subtract
+def subtract(n1, n2):
+    """Subtracts n1 and n2. Returns the sum"""
     return n1 - n2
 
 
-def multiply(n1, n2):  # Multiply
+def multiply(n1, n2):
+    """Multiples n1 and n2. Returns the sum"""
     return n1 * n2
 
 
-def divide(n1, n2):  # Divide
+def divide(n1, n2):
+    """Divides n1 and n2. Returns the sum"""
     return n1 / n2
 
 
-def exponent(n1, n2):  # Exponent
+def exponent(n1, n2):
+    """Provides exponent of n1 and n2. Returns the sum"""
     return n1 ** n2
 
 
@@ -42,8 +47,6 @@ def calculator():
     print(logo)
 
     while True:
-        
-
         try:
             num1 = float(input("What's the first number?: "))
             break

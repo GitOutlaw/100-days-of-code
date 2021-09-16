@@ -7,7 +7,7 @@ print(logo)
 
 
 def caesar(start_text, shift_amount, cipher_direction):
-
+    """Function that determines the postion of letter in text."""
     end_text = ""
     if cipher_direction == "decode":
         shift_amount *= -1
@@ -25,13 +25,14 @@ def caesar(start_text, shift_amount, cipher_direction):
 should_continue = True
 
 while should_continue:
-
+    # User inputs to get direction, text, and shift amount.
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
 
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
 
+    # User input to determine if user would like to rerun program.
     response = input(
         "Type 'yes' if you want to go again. Otherwise type 'no'.\n")
 
