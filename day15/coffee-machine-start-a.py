@@ -38,12 +38,17 @@ resources = {
 
 
 def menu_options():
+    profit = 0
     running = True
 
     while running:
 
         menu = input("  What would you like? (espresso/latte/cappuccino): ")
-        if menu == "espresso":
+
+        if menu == "off":
+            running = False
+
+        elif menu == "espresso":
             if resources["water"] > 50 and resources["coffee"] > 18:
                 resources["water"] -= 50
                 resources["coffee"] -= 18
@@ -61,6 +66,8 @@ def menu_options():
 
                 total_coins = total_quarters + total_dimes + total_nickels + total_pennies
                 change = total_coins - MENU["espresso"]["cost"]
+                
+                profit += 1.50
 
                 if total_coins >= 1.5:
                     print(f"Here us your change ${change}0")
@@ -90,6 +97,7 @@ def menu_options():
 
                 total_coins = total_quarters + total_dimes + total_nickels + total_pennies
                 change = total_coins - MENU["latte"]["cost"]
+                profit += 2.50
 
                 if total_coins >= 2.5:
                     print(f"Here us your change ${change}0")
@@ -119,8 +127,7 @@ def menu_options():
                 total_coins = total_quarters + total_dimes + total_nickels + total_pennies
                 change = total_coins - MENU["cappuccino"]["cost"]
 
-                if total_coins >= 1.5:
-
+                if total_coins >= 3.00:
                     print(f"Here us your change ${change}0.")
                     print("Here is your cappuccino ☕.")
 
@@ -133,9 +140,7 @@ def menu_options():
             print(f"Water: {resources['water']}ml")
             print(f"Milk: {resources['milk']}ml")
             print(f"Coffee: {resources['coffee']}g")
-
-        elif menu == "off":
-            running = False
+            print(f"Money: ${profit}0")
 
 
 menu_options()

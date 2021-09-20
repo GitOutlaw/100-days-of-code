@@ -1,5 +1,3 @@
-# from coffee_machine_data import MENU, resources, coins
-
 MENU = {
     "espresso": {
         "ingredients": {
@@ -32,93 +30,91 @@ resources = {
     "coffee": 100,
 }
 
+profit = 0
+
+
+def is_resource_sufficient():
+    """Returns True when order can be made, False if ingredients are insufficient."""
+    return
+
+
+def process_coins():
+    """Returns the total calculated from coins inserted."""
+    print("Please insert coins.")
+    quarters = int(input("How many quarters?: "))
+    dimes = int(input("How many dimes?: "))
+    nickels = int(input("How many nickels?: "))
+    pennies = int(input("How many pennies?: "))
+
+    total = quarters * 0.25
+    total += dimes * 0.10
+    total += nickels * 0.05
+    total += pennies * 0.01
+
+    print(f"")
+
+
+    
+    # change = total_coins - MENU["latte"]["cost"]
+
+    return
+
+
+def is_transaction_successful():
+    """Return True when the payment is accepted, or False if money is insufficient."""
+    return
+
+def make_coffee():
+    """Deduct the required ingredients from the resources."""
+    return
+
+
+
+
+
+
+
+
+
+
+# is_on = True
+
+# while is_on:
+#     choice = input("​What would you like? (espresso/latte/cappuccino): ")
+#     if choice == "off":
+#         is_on = False
+#     elif choice == "report":
+#         print(f"Water: {resources['water']}ml")
+#         print(f"Milk: {resources['milk']}ml")
+#         print(f"Coffee: {resources['coffee']}g")
+#         print(f"Money: ${profit}")
+#     else:
+#         drink = MENU[choice]
+#         if is_resource_sufficient(drink["ingredients"]):
+#             payment = process_coins()
+#             if is_transaction_successful(payment, drink["cost"]):
+#                 make_coffee(choice, drink["ingredients"])
+
+
+
 # TODO: 1. User input asking the menu
 # TODO: 2. Turning off for maintenance
 # TODO: 3. Check resources using report
 # TODO: 4. Check enough resources to make coffee
 
 
-def resource_check(drink, ingredient_type):
-    ingredients_check = MENU[drink]['ingredients'][ingredient_type]
-    resources_check = resources[ingredient_type]
-
-    if ingredients_check <= resources_check:
-        return True
-    elif ingredients_check > resources_check:
-        return False
-
-def check(water_check, milk_check, coffee_check):
-
-    if water_check:
-        if milk_check:
-            if coffee_check:
-                print('Please insert coins.')
-                return True
-            else:
-                print(f"Sorry there is not enough coffee.")
-        else:
-            print(f"Sorry there is not enough milk.")
-    else:
-        print(f"Sorry there is not enough water.")
-
-
 # TODO: 5. Input coins by user
 
-def money(name_of_coins):
-    ask_money = int(input(f"how many {name_of_coins}?: "))
-    return ask_money
+
+# def check_coins(check):
+#     coin_check = total_coins
 
 
 # TODO: 6. Calculate transaction
 
-def calculate_transaction(money_insufficient, give_change, same, change):
-    if money_insufficient:
-        print("Sorry that's not enough money. Money refunded.")
-        continue_serving = False
-    elif give_change:
-        print(f"Here is ${change} dollars in change.")
-        return True
-    elif same:
-        return True
-
 # TODO: 7. Add profit before making coffee
 # TODO: 8-1. Make coffee deduct ingredients
 
-def ingredients_deduction(drink, ingredient_type):
-    resources[ingredient_type] -= MENU[drink]['ingredients'][ingredient_type]
 
-#TODO: 8-2.  Print serving
-#TODO: 10. serve the next customer by repeating from todo1
-
-def menu():
-    user_choice = input(" What would you like? (espresso/latte/cappuccino): ")
-
-    if user_choice == "report":
-        print(f"Water: {resources['water']}ml")
-        print(f"Milk: {resources['milk']}ml")
-        print(f"Coffee: {resources['coffee']}g")
-        
-        
-
-    elif user_choice == "espresso":
-        resources["water"] -= 50
-        resources["coffee"] -= 18
-        
-
-    elif user_choice == "latte":
-        resources["water"] -= 200
-        resources["milk"] -= 150
-        resources["coffee"] -= 24
-        
-
-    elif user_choice == "cappuccino":
-        resources["water"] -= 250
-        resources["milk"] -= 100
-        resources["coffee"] -= 24
-    
-# elif user_choice == "off":
-    
-
-
-
-
+# TODO: 8-2.  Print serving
+# TODO: 10. serve the next customer by repeating from todo1
