@@ -1,11 +1,22 @@
+import turtle
+ 
+board = turtle.Turtle()
+ 
+# first triangle for star
+board.forward(100) # draw base
+ 
+
+board.forward(100)
+board.left(120)
+ 
+
+board.forward(100)
+board.left(120)
+ 
 
 
-for num in range(1, 101):
-    string =""
-    if num % 3 == 0:
-        string += "Fizz"
-    if num % 5 == 0:
-        string += "Buzz"
-    if num % 3 != 0 and num % 5 != 0:
-        string += str(num)
-    print(string)   
+board.forward(50)
+board.right(150)
+ 
+
+turtle.done()
