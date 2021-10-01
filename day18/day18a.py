@@ -1,17 +1,10 @@
 import turtle as t
-from turtle import Screen
+# from turtle import Screen
 import random
 
 tim = t.Turtle()
 
-colors = [
-    "light steel blue",
-    "forest green",
-    "lawn green",
-    "dark orchid",
-    "firebrick",
-    "khaki",
-    "turquoise",
+colors = ["light steel blue","forest green", "lawn green", "dark orchid", "firebrick","khaki","turquoise",
 ]
 
 
@@ -27,5 +20,5 @@ for shape_side_n in range(3, 11):
     draw_shape(shape_side_n)
 
 
-screen = Screen()
-screen.exitonclick()
+# screen = Screen()
+# screen.exitonclick()

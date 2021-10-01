@@ -1,22 +1,29 @@
 import turtle
- 
-board = turtle.Turtle()
- 
-# first triangle for star
-board.forward(100) # draw base
- 
+from turtle import Screen
+import random
 
-board.forward(100)
-board.left(120)
- 
-
-board.forward(100)
-board.left(120)
- 
+colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue",
+          "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+john = turtle.Turtle()
+john.width(6)
+john.hideturtle()
+john.speed('fastest')
 
 
-board.forward(50)
-board.right(150)
- 
+def go(heading, step_size):
+    john.setheading(heading)
+    john.forward(step_size)
 
-turtle.done()
+
+def random_walk(step_size, steps):
+    # Assumes turtle.mode('standard')
+    DIRECTIONS = (0, 90, 180, 270)
+    for _ in range(steps):
+        john.color(random.choice(colors))
+        go(random.choice(DIRECTIONS), step_size)
+
+
+random_walk(20, 100000)
+
+screen = Screen()
+screen.exitonclick()
