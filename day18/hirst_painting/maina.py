@@ -1,8 +1,8 @@
-import turtle as turtle
+import turtle as turtle_module
 import random
 
-john = turtle.Turtle()
-turtle.colormode(255)
+turtle_module.colormode(255)
+john = turtle_module.Turtle()
 john.speed("fastest")
 john.penup()
 john.hideturtle()
@@ -15,19 +15,26 @@ color_list = [(202, 164, 109), (238, 240, 245), (150, 75, 49), (223, 201, 135), 
 john.setheading(225)
 john.forward(300)
 john.setheading(0)
-number_of_dots = 100
 
-for dot_count in range(1, number_of_dots + 1):
-    john.dot(20, random.choice(color_list))
-    john.forward(50)
+def create_dots():
+    for _ in range(10):
+        john.dot(19, random.choice(color_list))
+        john.forward(10)    
+        john.forward(30)    
+        john.forward(10)
+        
 
-    if dot_count % 10 == 0:
-        john.setheading(90)
+def run():
+    for _ in range(10):
+        create_dots()
+        john.left(90)
         john.forward(50)
-        john.setheading(180)
+        john.left(90)
         john.forward(500)
-        john.setheading(0)
+        john.left(180)
 
 
-screen = turtle.Screen()  # Instantiates the Screen() function.
+run()
+
+screen = turtle_module.Screen()  # Instantiates the Screen() function.
 screen.exitonclick()  # Sets the window to be closed by user.
