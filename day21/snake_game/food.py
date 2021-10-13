@@ -1,6 +1,7 @@
 from turtle import Turtle
 import random
 
+
 class Food(Turtle):
 
     def __init__(self):
@@ -12,8 +13,8 @@ class Food(Turtle):
         self.speed("fastest")
         self.refresh()
 
-
     def refresh(self):
-        random_x = random.choice(range(-280, 280, 20))
-        random_y = random.choice(range(-280, 280, 20))
+        '''Sets random locaion of food on the screen.'''
+        random_x = random.choice(range(-270, 270, 20))
+        random_y = random.choice(range(-270, 270, 20))
         self.goto(random_x, random_y)
