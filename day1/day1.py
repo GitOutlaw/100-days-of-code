@@ -5,5 +5,3 @@ pet_name = input('What\'s your pets name?: \n')
 
 
 print(f'Your band name could be {city_name} {pet_name}')
-
-

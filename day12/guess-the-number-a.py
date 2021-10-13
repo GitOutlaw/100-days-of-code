@@ -7,7 +7,7 @@ HARD_LEVEL_TURNS = 5
 
 
 def check_answer(guess, answer, turns):
-    """Function to check user's guess against actual answer. 
+    """Function to check user's guess against actual answer.
     Passes guess, answer, turns"""
 
     if guess > answer:
