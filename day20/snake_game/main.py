@@ -9,6 +9,7 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
+# Setup the controls for the snake.
 snake = Snake()
 screen.listen()
 screen.onkey(snake.up, "Up")
