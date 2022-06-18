@@ -1,6 +1,6 @@
 # BMI Calculator 2.0
 
-# User input to get height and wieght, then calculate the BMI.
+# User input to get height and weight, then calculate the BMI.
 height = float(input("Enter your height in m: "))
 weight = float(input("Enter your weight in kg: "))
 bmi = round(weight / height ** 2)
